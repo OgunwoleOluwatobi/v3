@@ -1,0 +1,10 @@
+export { default as Logo} from './logo';
+export { default as Github} from './github';
+export { default as Linkedin} from './linkedin';
+export { default as Instagram} from './instagram';
+export { default as Dribble} from './dribble';
+export { default as Twitter} from './twitter';
+export { default as External} from './external';
+export { default as Range} from './range';
+export { default as Home} from './home';
+export { default as FormattedIcon } from './formattedIcons';

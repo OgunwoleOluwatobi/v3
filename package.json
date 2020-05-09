@@ -1,22 +1,38 @@
 {
-  "name": "gatsby-starter-default",
-  "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "name": "portfolio v3",
+  "description": "Personal Website V3",
+  "version": "1.0.0",
+  "author": "Ogunwole Oluwatobi <oluwatstar21@gmail.com>",
   "dependencies": {
+    "animejs": "^3.2.0",
+    "babel-plugin-styled-components": "^1.10.7",
     "gatsby": "^2.20.35",
+    "gatsby-background-image": "^1.1.1",
     "gatsby-image": "^2.3.5",
+    "gatsby-plugin-alias-imports": "^1.0.5",
+    "gatsby-plugin-google-analytics": "^2.3.1",
     "gatsby-plugin-manifest": "^2.3.7",
     "gatsby-plugin-offline": "^3.1.5",
     "gatsby-plugin-react-helmet": "^3.2.5",
+    "gatsby-plugin-robots-txt": "^1.5.0",
     "gatsby-plugin-sharp": "^2.5.7",
+    "gatsby-plugin-sitemap": "^2.4.2",
+    "gatsby-plugin-styled-components": "^3.2.4",
+    "gatsby-remark-external-links": "0.0.4",
+    "gatsby-remark-images": "^3.3.1",
     "gatsby-source-filesystem": "^2.2.5",
+    "gatsby-transformer-remark": "^2.8.0",
     "gatsby-transformer-sharp": "^2.4.7",
+    "gsap": "^3.2.6",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-helmet": "^6.0.0"
+    "react-helmet": "^6.0.0",
+    "react-transition-group": "^4.3.0",
+    "react-use": "^14.2.0",
+    "scrollreveal": "^4.0.6",
+    "smooth-scroll": "^16.1.3",
+    "styled-components": "^5.1.0"
   },
   "devDependencies": {
     "prettier": "2.0.4"
@@ -36,7 +52,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/ogunwoleoluwatobi/v3"
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
