@@ -1,5 +1,5 @@
 {
-  "name": "portfolio v3",
+  "name": "v3",
   "description": "Personal Website V3",
   "version": "1.0.0",
   "author": "Ogunwole Oluwatobi <oluwatstar21@gmail.com>",
@@ -17,7 +17,7 @@
     "gatsby-plugin-robots-txt": "^1.5.0",
     "gatsby-plugin-sharp": "^2.5.7",
     "gatsby-plugin-sitemap": "^2.4.2",
-    "gatsby-plugin-styled-components": "^3.2.4",
+    "gatsby-plugin-styled-components": "^3.3.1",
     "gatsby-remark-external-links": "0.0.4",
     "gatsby-remark-images": "^3.3.1",
     "gatsby-source-filesystem": "^2.2.5",
