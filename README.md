@@ -11,11 +11,11 @@
   Previous iteration:
   <a href="https://github.com/OgunwoleOluwatobi/MyPortfolio" target="_blank">v1</a>
 </p>
-<!-- <p align="center">
-  <a href="https://app.netlify.com/sites/brittanychiang/deploys" target="_blank">
-    <img src="https://api.netlify.com/api/v1/badges/1963b488-7b78-48c9-9e2d-6fb5e47ab3af/deploy-status" alt="Netlify Status" />
+<p align="center">
+  <a href="https://app.netlify.com/sites/archie/deploys" target="_blank">
+    <img src="https://api.netlify.com/api/v1/badges/ae40c064-37b3-47a3-b107-dc8e9a291f44/deploy-status" alt="Netlify Status" />
   </a>
-</p> -->
+</p>
 
 ![demo](https://github.com/OgunwoleOluwatobi/v3/blob/master/src/images/demo.png?raw=true)
 
