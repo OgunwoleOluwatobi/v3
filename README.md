@@ -5,7 +5,7 @@
   ogunwoleoluwatobi.ga - v4
 </h1>
 <p align="center">
-  The fourth iteration of <a href="https://brittanychiang.com" target="_blank">ogunwoleoluwatobi.ga</a> built with <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby</a> and hosted with <a href="https://www.netlify.com/" target="_blank">Netlify</a>
+  The third iteration of <a href="https://ogunwoleoluwatobi.ga" target="_blank">ogunwoleoluwatobi.ga</a> built with <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby</a> and hosted with <a href="https://www.netlify.com/" target="_blank">Netlify</a>
 </p>
 <p align="center">
   Previous iteration:

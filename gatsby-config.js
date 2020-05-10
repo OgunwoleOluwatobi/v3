@@ -8,6 +8,7 @@ module.exports = {
     description: config.siteDescription,
   },
   plugins: [
+    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
@@ -15,7 +16,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sitemap`,

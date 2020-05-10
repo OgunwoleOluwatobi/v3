@@ -113,9 +113,6 @@ const ImgContain = styled.div`
         transition: ${theme.transition};
         background-image: linear-gradient(180deg, ${colors.shadowGreen} 8%, ${colors.shadowWhite} 100%);
         border-radius: 50%;
-        &:hover {
-          ${setTimeout(() => props =>props.play('paused'), 2000)};
-        }
     }
 `;
 const Avatar = styled(Img)`

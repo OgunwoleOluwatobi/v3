@@ -37,7 +37,7 @@ const Contain = styled(Section)`
         width: 100%;
     }
 
-    .stagger-visualizer .dots-wrapper {
+    .dots-wrapper {
         transform: translateZ(0);
         position: absolute;
         top: 0;
@@ -47,11 +47,10 @@ const Contain = styled(Section)`
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        align-items: center;
-        
+        align-items: center;        
     }
 
-    .stagger-visualizer .dot {
+    &.dot {
         position: relative;
         z-index: 1;
         width: 8px;
@@ -60,12 +59,9 @@ const Contain = styled(Section)`
         background-color: transparent;
         background-image: linear-gradient(180deg, ${colors.shadowGreen} 8%, ${colors.shadowWhite} 100%);
         border-radius: 50%;
-        &:hover {
-          ${setTimeout(() => props =>props.play('paused'), 2000)};
-        }
     }
 
-    .stagger-visualizer .cursor {
+    &.cursor {
         position: absolute;
         top: 0px;
         left: 0px;
