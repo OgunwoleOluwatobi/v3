@@ -50,7 +50,7 @@ const Contain = styled(Section)`
         align-items: center;        
     }
 
-    &.dot {
+    .dot {
         position: relative;
         z-index: 1;
         width: 8px;
@@ -61,7 +61,7 @@ const Contain = styled(Section)`
         border-radius: 50%;
     }
 
-    &.cursor {
+    .cursor {
         position: absolute;
         top: 0px;
         left: 0px;

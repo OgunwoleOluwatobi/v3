@@ -80,8 +80,8 @@ const ImgContain = styled.div`
         height: 250px;
         overflow: hidden;
         z-index: -1;
-        ${media.bigDesktop` width: 300px; height: 250px; left: 5%;`};
-        ${media.phablet`width: 240px; height: 200px; top: 10%; left: -4%;`}
+        ${media.bigDesktop` width: 300px; height: 250px;`};
+        ${media.phablet`width: 240px; height: 250px; top: 10%;`}
     }
     .stagger-visualizer {
         position: absolute;
