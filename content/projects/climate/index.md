@@ -2,8 +2,8 @@
 id: '1'
 bg: './climatemock.jpg'
 title: 'Climate Prediction'
-github: '/'
-external: 'https://react-burger-6837f.firebaseapp.com'
+github: 'https://github.com/OgunwoleOluwatobi/Climate-Predict'
+external: 'https://climate-predict.herokuapp.com/'
 built:
     - React
     - Python
