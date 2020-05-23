@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import {theme, media} from '@styles';
 import { navLinks } from '@config';
+import { Helmet } from 'react-helmet';
 const { colors, fontSizes, fonts } = theme;
 
 const StyledIcon = styled.div`
@@ -172,31 +173,35 @@ const HamburgerMenu = () => {
     const clickHandler = e => {
       const target = e.target;
       const isLink = target.hasAttribute('href');
+      const isMenu = target.classList && target.classList[0].includes('StyledIcon');
 
-      if(isLink) {
+      if(isLink || isMenu) {
         toggleMenu();
       }
     }
 
     return (
-        <StyledIcon menuOpen={menuOpen} onClick={clickHandler} aria-hidden={!menuOpen}>
-            <Holder menuOpen={menuOpen}>
-                <StyledList menuOpen={menuOpen}>
-                    {navLinks && navLinks.map(({url, name}, i) => (
-                        <StyledListItem key={i}>
-                            <StyledListLink to={url}>{name}</StyledListLink>
-                        </StyledListItem>
-                    ))}
-                </StyledList>
-            </Holder>
-            <TransitionGroup component={null}>
-              <CSSTransition classNames={'fadedown'} timeout={2000}>
-                <Hamburger menuOpen={menuOpen} onClick={toggleMenu}>
-                  <StyledHamburgerBox className="one">
-                    <StyledHamburgerInner className="two" menuOpen={menuOpen} />
-                  </StyledHamburgerBox>
-                </Hamburger>
-              </CSSTransition>
+      <StyledIcon menuOpen={menuOpen} onClick={clickHandler} aria-hidden={!menuOpen}>
+        <Helmet>
+          <body className={menuOpen ? 'blur' : ''} />
+        </Helmet>
+          <Holder menuOpen={menuOpen}>
+              <StyledList menuOpen={menuOpen}>
+                  {navLinks && navLinks.map(({url, name}, i) => (
+                      <StyledListItem key={i}>
+                          <StyledListLink to={url}>{name}</StyledListLink>
+                      </StyledListItem>
+                  ))}
+              </StyledList>
+          </Holder>
+          <TransitionGroup component={null}>
+            <CSSTransition classNames={'fadedown'} timeout={2000}>
+              <Hamburger menuOpen={menuOpen} onClick={toggleMenu}>
+                <StyledHamburgerBox className="one">
+                  <StyledHamburgerInner className="two" menuOpen={menuOpen} />
+                </StyledHamburgerBox>
+              </Hamburger>
+            </CSSTransition>
           </TransitionGroup>
         </StyledIcon>
     )

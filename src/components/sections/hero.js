@@ -106,14 +106,14 @@ const GreenName = styled.span`
   color: ${colors.green};
 `;
 const Subtitle = styled.h3`
-  font-size: 80px;
+  font-size: 70px;
   line-height: 1.1;
   color: ${colors.dustyWhite};
   z-index: 10;
   ${media.desktop`font-size: 70px`};
   ${media.tablet`font-size: 60px`};
-  ${media.phablet`font-size: 50px`};
-  ${media.phone`font-size: 40px`};
+  ${media.phablet`font-size: 45px`};
+  ${media.phone`font-size: 35px`};
 `;
 const Description = styled.div`
   margin-top: 15px;

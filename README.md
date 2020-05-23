@@ -5,10 +5,13 @@
   ogunwoleoluwatobi.ga - v4
 </h1>
 <p align="center">
-  The third iteration of <a href="https://ogunwoleoluwatobi.ga" target="_blank">ogunwoleoluwatobi.ga</a> built with <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby</a> and hosted with <a href="https://www.netlify.com/" target="_blank">Netlify</a>
+  The third version of <a href="https://ogunwoleoluwatobi.ga" target="_blank">ogunwoleoluwatobi.ga</a> built with <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby</a> and hosted with <a href="https://www.netlify.com/" target="_blank">Netlify</a>
+</p>
+<p>
+  Inspiration from <a href="brittanychiang.com">brittany chiang website</a>
 </p>
 <p align="center">
-  Previous iteration:
+  Previous version:
   <a href="https://github.com/OgunwoleOluwatobi/MyPortfolio" target="_blank">v1</a>
 </p>
 <p align="center">

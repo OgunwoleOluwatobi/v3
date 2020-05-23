@@ -3,8 +3,8 @@ module.exports = {
     siteDescription:
       'Ogunwole Oluwatobi is a software engineer based in Lagos, NG who specializes in building and designing exceptional websites, applications, and everything in between.',
     siteKeywords:
-      'Ogunwole Oluwatobi, ogunwole oluwatobi, Tobi, ogunwoleoluwatobi, Ogunwole, Oluwatobi, Archie, software developer, software engineer, fron-end developer, front-end engineer, web developer, babcock',
-    siteUrl: 'https://ogunwoleoluwatobi.ga',
+      'Ogunwole Oluwatobi, ogunwoleoluwatobi.ga, ogunwoleoluwatobi.cf, ogunwole oluwatobi portfolio, ogunwole archie, oluwatobi archie, ogunwole oluwatobi archie, ogunwole oluwatobi, Tobi, ogunwoleoluwatobi, Ogunwole, Oluwatobi, Archie, software developer, software engineer, fron-end developer, front-end engineer, web developer, babcock',
+    siteUrl: 'https://www.ogunwoleoluwatobi.ga',
     siteLanguage: 'en_US',
     googleAnalyticsID: 'UA-145487488-1',
     googleVerification: 'WSx1YsPbcIvCOt_ilSmoqaUJTLy_LEr1nz9HOA_KvAY',

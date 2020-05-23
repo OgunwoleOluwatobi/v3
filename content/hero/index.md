@@ -4,7 +4,7 @@ name_1: 'Ogun'
 name_2: 'wole'
 name_3: 'Oluwa'
 name_4: 'tobi'
-subtitle: 'I build things for the web.'
+subtitle: 'I create things for web & mobile.'
 buttonText: 'Get In Touch'
 resumeText: 'Resume'
 ---
