@@ -100,23 +100,34 @@ const Jobs = ({ data }) => {
         <Container id="experience">
             <Heading ref={revealTitle} width="100px" min="90px"><span className="one">Work&nbsp;</span><span className="two">Experience</span></Heading>
             <StyledContent>
-                {data && data.map(({ node }, i) => {
+                {/* {data && data.map(({ node }, i) => {
                     const { frontmatter } = node;
-                    const { title, company, range } = frontmatter;
-                    return(
-                        <Content key={i} ref={el => (revealJobs.current[i] = el)}>
-                            <Title>{title}</Title>
+                    const { title, company, range } = frontmatter; */}
+                    {/* return(
+                        <div>
+                        { data.length% 2 === 0 && i  === data.length - 1 ? <></> :  */}
+                        <Content >
+                            <Title>{data[0].node.frontmatter.title}</Title>
                             <Hold>
                                 <Range />
                                 <More>
-                                    <Company><a href="/">{company}</a></Company>
-                                    <Duration>{range}</Duration>
+                                    <Company><a href="/">{data[0].node.frontmatter.company}</a></Company>
+                                    <Duration>{data[0].node.frontmatter.range}</Duration>
+                                </More>
+                            </Hold>
+                            <Title>{data[1].node.frontmatter.title}</Title>
+                            <Hold>
+                                <Range />
+                                <More>
+                                    <Company><a href="/">{data[1].node.frontmatter.company}</a></Company>
+                                    <Duration>{data[1].node.frontmatter.range}</Duration>
                                 </More>
                             </Hold>
                             <Title>Future&nbsp;<span><a href={`mailto:${email}`}>you decide.</a></span></Title>
                         </Content>
-                    )
-                })}
+                {/*     )
+                 })} */}
+                {/* <Title>Future&nbsp;<span><a href={`mailto:${email}`}>you decide.</a></span></Title> */}
             </StyledContent>
         </Container>
     )
