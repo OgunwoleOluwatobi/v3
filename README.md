@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="Logo" src="https://gitcdn.link/repo/OgunwoleOluwatobi/v3/master/src/images/logo.png" width="100" />
+  <img alt="Logo" src="https://rawcdn.githack.com/OgunwoleOluwatobi/v3/d7ce683ab7d67e27f792362362fbf777fe07cbd1/src/images/logo.png" width="100" />
 </div>
 <h1 align="center">
   ogunwoleoluwatobi.ga - v4
@@ -20,7 +20,7 @@
   </a>
 </p>
 
-![demo](https://gitcdn.link/repo/OgunwoleOluwatobi/v3/master/src/images/demo.png)
+![demo](https://rawcdn.githack.com/OgunwoleOluwatobi/v3/d7ce683ab7d67e27f792362362fbf777fe07cbd1/src/images/demo.png)
 
 ## 🛠 Installation & Set Up
 
