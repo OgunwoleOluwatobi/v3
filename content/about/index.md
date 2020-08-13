@@ -7,7 +7,7 @@ skills:
     - React
     - Vue
     - Node.js
-    - Java for Android
+    - Android (Java & Kotlin)
     - JavaScript
     - PHP
 ---
@@ -16,6 +16,6 @@ Hey there! I'm Oluwatobi also go by Archie, a software engenieer based in Lagos 
 
 I enjoy creating and designing beautiful and high performance web and mobile applications and everything in between. My Goal is to create high performing and efficient application that enhance user experience.
 
-I'm currently still a student at [Babcock University](https://www.babcock.edu.ng) , but I recently worked with the engineering team at [Emzor Pharmacueticals](https://www.emzorpharma.com) where i worked on various creative and meaningful projects during my internship.
+I currently graduated from [Babcock University](https://www.babcock.edu.ng) , but I recently completed an internship program with [Hotels.ng](https://hngi7.hng.tech/) where i worked on various creative and meaningful projects during course of the program.
 
 Here are a few technologies I'm familiar with:

@@ -4,9 +4,9 @@ name_1: 'Ogun'
 name_2: 'wole'
 name_3: 'Oluwa'
 name_4: 'tobi'
-subtitle: 'I create things for web & mobile.'
+subtitle: 'I develop for web & mobile.'
 buttonText: 'Get In Touch'
 resumeText: 'Resume'
 ---
 
-I'm a software engineer based in Lagos, NG specializing in building and designing exceptional mobile and web applications, and everything in between.
+I'm a software engineer based in Lagos, NG specialized in building and delivering exceptional mobile and web applications, and everything in between.

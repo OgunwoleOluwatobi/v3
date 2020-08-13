@@ -106,7 +106,7 @@ const Jobs = ({ data }) => {
                     {/* return(
                         <div>
                         { data.length% 2 === 0 && i  === data.length - 1 ? <></> :  */}
-                        <Content >
+                        <Content ref={el => (revealJobs.current[1] = el)}>
                             <Title>{data[0].node.frontmatter.title}</Title>
                             <Hold>
                                 <Range />

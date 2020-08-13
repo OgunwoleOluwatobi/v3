@@ -45,7 +45,7 @@ const Cover = styled.div`
     grid-column: 6 / -1;
     grid-row: 1 / -1;
     width: 100px;
-    height: 90%;
+    height: 93%;
     box-shadow: 25px 0px 12px -12px ${colors.shadowBlue};
     background-color: ${colors.hamblue};
     z-index: 3;
