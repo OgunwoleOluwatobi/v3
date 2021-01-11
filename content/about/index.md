@@ -1,6 +1,6 @@
 ---
 title: 'About Me'
-avatar: './me2.jpg'
+avatar: './me2.png'
 skills:
     - HTML & (S)CSS
     - Flutter
