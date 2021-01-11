@@ -3,6 +3,7 @@ no: '1'
 title: 'CustomerPayMe'
 cover: './customerpayme.png'
 github: 'https://github.com/customerpayme/customerpaymemobile'
+external: 'https://play.google.com/store/apps/details?id=me.customerpay.hngsentry'
 built:
     - Flutter
     - Dart
