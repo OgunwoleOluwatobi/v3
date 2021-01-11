@@ -6,6 +6,7 @@ skills:
     - Flutter
     - React
     - Vue
+    - Gatsby
     - Node.js
     - Android (Java & Kotlin)
     - JavaScript
