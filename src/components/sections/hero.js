@@ -6,7 +6,8 @@ import { theme, media, Section } from '@styles';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 const { colors, fontSizes, fonts, navDelay, loaderDelay } = theme;
 
-const Contain = styled(Section)`
+const Contain = styled(Section)
+`
   position: relative;
   min-height: 100vh;
   display: flex;
@@ -130,10 +131,10 @@ const ButtonHolder = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 70%;
+  width: 50%;
   margin-top: 40px;
   ${media.desktop`
-    width: 100%;
+    width: 80%;
   `}
 `;
 const EmailLink = styled.div`
@@ -143,6 +144,9 @@ const EmailLink = styled.div`
   padding: 1px;
   z-index: 1;
   border-radius: 5px;
+  width: 8rem;
+  display: block;
+  text-align: center;
   .inner {
     position: relative;
     background-color: ${colors.darkBlue};
@@ -223,6 +227,9 @@ const StyledResume = styled.a`
   color: ${colors.green};
   background-color: ${colors.greenButton};
   border: none;
+  width: 8rem;
+  display: block;
+  text-align: center;
   border-radius: 5px;
   padding: 0.75rem 1.5rem;
   font-size: ${fontSizes.md};
