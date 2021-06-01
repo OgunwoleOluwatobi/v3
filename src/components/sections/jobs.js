@@ -14,6 +14,8 @@ const StyledContent = styled.div`
     justify-content: space-around;
 `;
 const Content = styled.div`
+    max-width: 20rem;
+    max-height: 40rem;
     background-color: ${colors.hamblue};
     display: flex;
     flex-direction: column;
@@ -30,6 +32,10 @@ const Title = styled.h4`
     span a {
         color: ${colors.dustyWhite};
         text-decoration: underline;
+        &:hover{
+            color: ${colors.green};
+            cursor: pointer;
+        }
     }
 `;
 const Hold = styled.div`
@@ -121,6 +127,26 @@ const Jobs = ({ data }) => {
                                 <More>
                                     <Company><a href="/">{data[1].node.frontmatter.company}</a></Company>
                                     <Duration>{data[1].node.frontmatter.range}</Duration>
+                                </More>
+                            </Hold>
+                            {/* <Title>Future&nbsp;<span><a href={`mailto:${email}`}>you decide.</a></span></Title> */}
+                        </Content>
+                        
+                        <Content ref={el => (revealJobs.current[2] = el)}>
+                            <Title>{data[2].node.frontmatter.title}</Title>
+                            <Hold>
+                                <Range />
+                                <More>
+                                    <Company><a href="/">{data[2].node.frontmatter.company}</a></Company>
+                                    <Duration>{data[2].node.frontmatter.range}</Duration>
+                                </More>
+                            </Hold>
+                            <Title>{data[3].node.frontmatter.title}</Title>
+                            <Hold>
+                                <Range />
+                                <More>
+                                    <Company><a href="/">{data[3].node.frontmatter.company}</a></Company>
+                                    <Duration>{data[3].node.frontmatter.range}</Duration>
                                 </More>
                             </Hold>
                             <Title>Future&nbsp;<span><a href={`mailto:${email}`}>you decide.</a></span></Title>
