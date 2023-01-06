@@ -9,4 +9,4 @@ buttonText: 'Get In Touch'
 resumeText: 'Resume'
 ---
 
-I'm a software engineer based in Lagos, NG specialized in building and delivering exceptional mobile and web applications, and everything in between.
+I'm a software engineer based in London, UK specialized in building and delivering exceptional mobile and web applications, and everything in between.

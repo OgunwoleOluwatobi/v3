@@ -14,12 +14,13 @@ const StyledContent = styled.div`
     justify-content: space-around;
 `;
 const Content = styled.div`
-    max-width: 20rem;
+    max-width: 18rem;
     max-height: 40rem;
     background-color: ${colors.hamblue};
     display: flex;
     flex-direction: column;
     padding: 15px 25px;
+    margin: 0px 5px;
     border-radius: 15px;
     box-shadow: 10px 15px 8px -5px ${colors.shadowBlue};
 `;
@@ -147,6 +148,25 @@ const Jobs = ({ data }) => {
                                 <More>
                                     <Company><a href="/">{data[3].node.frontmatter.company}</a></Company>
                                     <Duration>{data[3].node.frontmatter.range}</Duration>
+                                </More>
+                            </Hold>
+                        </Content>
+                        
+                        <Content ref={el => (revealJobs.current[3] = el)}>
+                            <Title>{data[4].node.frontmatter.title}</Title>
+                            <Hold>
+                                <Range />
+                                <More>
+                                    <Company><a href="/">{data[4].node.frontmatter.company}</a></Company>
+                                    <Duration>{data[4].node.frontmatter.range}</Duration>
+                                </More>
+                            </Hold>
+                            <Title>{data[5].node.frontmatter.title}</Title>
+                            <Hold>
+                                <Range />
+                                <More>
+                                    <Company><a href="/">{data[5].node.frontmatter.company}</a></Company>
+                                    <Duration>{data[5].node.frontmatter.range}</Duration>
                                 </More>
                             </Hold>
                             <Title>Future&nbsp;<span><a href={`mailto:${email}`}>you decide.</a></span></Title>

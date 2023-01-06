@@ -1,7 +1,7 @@
 ---
-no: '4'
+id: '7'
 title: 'Expenses Keep'
-cover: './expense-mock.jpg'
+bg: './expense-mock.jpg'
 github: 'https://github.com/OgunwoleOluwatobi/Expense-Tracker'
 external: 'https://serene-ravine-24363.herokuapp.com/'
 built:

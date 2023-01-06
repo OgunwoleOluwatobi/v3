@@ -1,7 +1,7 @@
 ---
-no: '3'
+id: '1'
 title: 'Keke-it'
-cover: './keke-it-mock.jpg'
+bg: './keke-it-mock.jpg'
 github: 'https://github.com/OgunwoleOluwatobi/Kekeit'
 built:
     - Android Studio
