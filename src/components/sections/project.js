@@ -8,13 +8,14 @@ import { keyFramesRight, keyFramesLeft, keyFramesTop } from '@styles/keyframes';
 import { theme, media, Section, Heading } from '@styles';
 const { colors, fontSizes, fonts } = theme;
 
-const StyledContainer = styled(Section)`
+const StyledContainer = styled(Section)
+`
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 `;
-const StyledContent = styled.div`
+const StyledContent = styled.div `
     position: relative;
     grid-column: 1 / 8;
     grid-row: 1 / -1;
@@ -341,7 +342,7 @@ const Project = ({ data }) => {
         <div>
             {project && project.map(({ node }, i) => {
                 const { frontmatter, html } = node;
-                const { external, title, github, built, cover} = frontmatter;
+                const { android, ios, external, title, github, built, cover} = frontmatter;
 
                 return(
                     <Hold key={i} ref={el => (revealProject.current[i] = el)}>
@@ -360,6 +361,24 @@ const Project = ({ data }) => {
                                         )}
                                     </Label>
                                     <Links>
+                                        {android && (
+                                            <a
+                                            href={android}
+                                            target="_blank"
+                                            rel="nofollow noopener noreferrer"
+                                            aria-label="Android Link">
+                                                <FormattedIcon name="Android" />
+                                            </a>
+                                        )}
+                                        {ios && (
+                                            <a
+                                            href={ios}
+                                            target="_blank"
+                                            rel="nofollow noopener noreferrer"
+                                            aria-label="iOS Link">
+                                                <FormattedIcon name="iOS" />
+                                            </a>
+                                        )}
                                         {github && (
                                             <a
                                             href={github}

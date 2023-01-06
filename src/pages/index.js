@@ -1,10 +1,10 @@
 import React from "react"
 import styled from 'styled-components';
-import {media} from '@styles'
+import { media } from '@styles'
 import { Layout, Hero, About, Project, Projects, Jobs, Contact } from '@components'
 import { graphql } from "gatsby";
 
-const Container = styled.main`
+const Container = styled.main `
   padding: 0 150px;
   margin: 0 auto;
   max-width: 1600px;
@@ -67,6 +67,8 @@ export const pageQuery = graphql `
               }
               built
               github
+              android
+              ios
               external
             }
             html

@@ -1,7 +1,7 @@
 ---
-no: '2'
+id: '4'
 title: 'iMotivate'
-cover: './imotivate-banner.png'
+bg: './imotivate-banner.png'
 github: 'https://github.com/OgunwoleOluwatobi/QuotesApp'
 external: 'https://play.google.com/store/apps/details?id=com.hngtask.imotivate'
 built:

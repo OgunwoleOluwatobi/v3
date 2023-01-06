@@ -1,22 +1,23 @@
 ---
 title: 'About Me'
-avatar: './me2.png'
+avatar: './main.jpg'
 skills:
     - Flutter
     - HTML & (S)CSS
+    - JavaScript
+    - Android (Java & Kotlin)
     - React
     - Gatsby
     - Node.js
-    - Android (Java & Kotlin)
-    - JavaScript
     - PHP
     - Vue
+    - Python
 ---
 
 Hey there! I'm Oluwatobi also go by Archie, a software engenieer based in Lagos NG.
 
 I enjoy creating and designing beautiful and high performance web and mobile applications and everything in between. My Goal is to create high performing and efficient application that enhance user experience.
 
-I a graduate of [Babcock University](https://www.babcock.edu.ng) , and I completed an internship program with [Hotels.ng](https://hngi7.hng.tech/) where i worked on various creative and meaningful projects during course of the program. I currently work with [Advansio Interactive Ltd.](http://advansio.com/) as a Senior Mobile Developer.
+I'm a graduate of [Babcock University](https://www.babcock.edu.ng) , and I have about 5 years of experience developing efficient and scalable mobile applications. I currently work with [Pillar](https://www.hellopillar.com/) as a Mobile Developer.
 
 Here are a few technologies I'm familiar with:

@@ -1,4 +1,6 @@
 export { default as Logo} from './logo';
+export { default as Android} from './android';
+export { default as IOS} from './ios';
 export { default as Github} from './github';
 export { default as Linkedin} from './linkedin';
 export { default as Instagram} from './instagram';
