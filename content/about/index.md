@@ -2,10 +2,11 @@
 title: 'About Me'
 avatar: './main.jpg'
 skills:
-    - Flutter
-    - HTML & (S)CSS
+    - Dart & Flutter
+    - Java & Kotlin
+    - Swift
     - JavaScript
-    - Android (Java & Kotlin)
+    - HTML & (S)CSS
     - React
     - Gatsby
     - Node.js
@@ -14,10 +15,10 @@ skills:
     - Python
 ---
 
-Hey there! I'm Oluwatobi also go by Archie, a software engenieer based in Lagos NG.
+Hey there! meet Oluwatobi (also go by archie), a brilliant and accomplished Senior Mobile Engineer with a six-year track record in developing exceptional mobile solutions. With expertise spanning Flutter, Android, iOS, and web technologies, Oluwatobi has played a pivotal role in shaping digital experiences both in africa and on the internatonal stage.
 
-I enjoy creating and designing beautiful and high performance web and mobile applications and everything in between. My Goal is to create high performing and efficient application that enhance user experience.
+I enjoy creating and designing beautiful and high performance web and mobile applications and everything in between. My Goal is to create high performant and efficient application that enhance user experience.
 
-I'm a graduate of [Babcock University](https://www.babcock.edu.ng) , and I have about 5 years of experience developing efficient and scalable mobile applications. I currently work with [Pillar](https://www.hellopillar.com/) as a Mobile Developer.
+I currently work with [Pillar](https://www.hellopillar.com/) as a Mobile Engineer creating intresting digital experiences in the financial space with [Flutter](https://flutter.dev/).
 
 Here are a few technologies I'm familiar with:
