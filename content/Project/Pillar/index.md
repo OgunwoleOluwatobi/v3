@@ -3,12 +3,14 @@ no: '1'
 title: 'Pillar'
 cover: './pillar.png'
 # github: 'https://github.com/customerpayme/customerpaymemobile'
-# android: 'https://play.google.com/store/apps/details?id=com.bloombankafrica.bloombankMobile'
-# ios: 'https://apps.apple.com/ng/app/bloom-bank-mobile/id1629249850'
+android: 'https://play.google.com/store/apps/details?id=com.affinitech.pillar'
+ios: 'https://apps.apple.com/gb/app/pillar-uk/id1614226193'
 external: 'https://www.hellopillar.com/'
 built:
     - Flutter
     - Dart
+    - Kotlin
+    - Swift
     - Stacked Architecture
 show: true
 ---
