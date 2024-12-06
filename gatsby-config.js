@@ -60,8 +60,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `OgunwoleOluwatobi`,
-        short_name: `OgunwoleOluwatobi`,
+        name: `OluwatobiOgunwole`,
+        short_name: `OluwatobiOgunwole`,
         start_url: `/`,
         background_color: config.colors.darkBlue,
         theme_color: config.colors.green,
