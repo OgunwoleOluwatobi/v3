@@ -74,7 +74,7 @@ const Footer = () => {
                     ))}
                 </SocialList>
             </StyledSocial>
-            <div>Designed and Built by Ogunwole Oluwatobi</div>
+            <div>Designed and Built by Oluwatobi Ogunwole</div>
         </StyledContainer>
     )
 }
