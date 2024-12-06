@@ -1,9 +1,9 @@
 ---
 title: 'Hi, my name is'
-name_1: 'Ogun'
-name_2: 'wole'
-name_3: 'Oluwa'
-name_4: 'tobi'
+name_1: 'Oluwa'
+name_2: 'tobi'
+name_3: 'Ogun'
+name_4: 'wole'
 subtitle: 'I develop for web & mobile.'
 buttonText: 'Get In Touch'
 resumeText: 'Resume'
