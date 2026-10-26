@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
-import Img from 'gatsby-image';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import sr from '@utils/sr';
 import { srConfig } from '@config';
 import { FormattedIcon } from '../icons';
@@ -143,7 +143,7 @@ const TechList = styled.ul`
         }
     }
 `;
-const StyledImg = styled(Img)`
+const StyledImg = styled(GatsbyImage)`
     width: 100%;
     height: 100%;
 `;
@@ -169,7 +169,7 @@ const Projects = ({ data }) => {
                         return(
                             <Hold key={i} ref={el => (revealProject.current[i] = el)}>
                                 <div className="Imgi">
-                                    <StyledImg fluid={bg.childImageSharp.fluid} />
+                                    <StyledImg image={getImage(bg)} alt={title} />
                                 </div>
                                 <div className="Txt">
                                     <Title>{title}</Title>

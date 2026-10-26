@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
-import Img from 'gatsby-image';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import sr from '@utils/sr';
 import { srConfig } from '@config';
 import { FormattedIcon } from '../icons';
@@ -127,7 +127,7 @@ const Built = styled.ul`
         width: 100%;
     `};
 `;
-const ImgContainer = styled(Img)`
+const ImgContainer = styled(GatsbyImage)`
     width: 100%;
     max-width: 100%;
     vertical-align: middle;
@@ -411,7 +411,7 @@ const Project = ({ data }) => {
                             href={external ? external : github ? github : '#'}
                             target="_blank"
                             rel="nofollow noopener noreferrer">
-                            <ImgContainer fluid={cover.childImageSharp.fluid} alt={title} />
+                            <ImgContainer image={getImage(cover)} alt={title} />
                         </StyledImg>
                         <Cover></Cover>
                     </Hold>

@@ -2,10 +2,10 @@
   <img alt="Logo" src="https://rawcdn.githack.com/OgunwoleOluwatobi/v3/d7ce683ab7d67e27f792362362fbf777fe07cbd1/src/images/logo.png" width="100" />
 </div>
 <h1 align="center">
-  ogunwoleoluwatobi.ga - v4
+  archie.netlify.app - v4
 </h1>
 <p align="center">
-  The third version of <a href="https://ogunwoleoluwatobi.ga" target="_blank">ogunwoleoluwatobi.ga</a> built with <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby</a> and hosted with <a href="https://www.netlify.com/" target="_blank">Netlify</a>
+  The third version of <a href="https://archie.netlify.app" target="_blank">archie.netlify.app</a> built with <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby</a> and hosted with <a href="https://www.netlify.com/" target="_blank">Netlify</a>
 </p>
 <p>
   Inspiration from <a href="brittanychiang.com">brittany chiang website</a>
@@ -24,25 +24,19 @@
 
 ## 🛠 Installation & Set Up
 
-1. Install the Gatsby CLI
-
-   ```sh
-   npm install -g gatsby-cli
-   ```
-
-2. Install and use the correct version of Node using [NVM](https://github.com/nvm-sh/nvm)
+1. Install and use the correct version of Node (24, from `.nvmrc`) using [NVM](https://github.com/nvm-sh/nvm)
 
    ```sh
    nvm install
    ```
 
-3. Install dependencies
+2. Install dependencies
 
    ```sh
-   yarn
+   npx yarn@1 install
    ```
 
-4. Start the development server
+3. Start the development server
 
    ```sh
    npm start

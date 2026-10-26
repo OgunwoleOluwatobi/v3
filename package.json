@@ -4,38 +4,35 @@
     "version": "1.0.0",
     "author": "Oluwatobi Ogunwole <oluwatstar21@gmail.com>",
     "dependencies": {
-        "animejs": "^3.2.0",
-        "babel-plugin-styled-components": "^1.10.7",
-        "gatsby": "^2.20.35",
-        "gatsby-background-image": "^1.1.1",
-        "gatsby-image": "^2.3.5",
-        "gatsby-plugin-alias-imports": "^1.0.5",
-        "gatsby-plugin-google-analytics": "^2.3.1",
-        "gatsby-plugin-manifest": "^2.3.7",
-        "gatsby-plugin-offline": "^3.1.5",
-        "gatsby-plugin-react-helmet": "^3.2.5",
-        "gatsby-plugin-robots-txt": "",
-        "gatsby-plugin-sharp": "^2.5.7",
-        "gatsby-plugin-sitemap": "^2.4.3",
-        "gatsby-plugin-styled-components": "^3.3.1",
+        "animejs": "^3.2.2",
+        "babel-plugin-styled-components": "^2.1.4",
+        "gatsby": "^5.14.0",
+        "gatsby-plugin-image": "^3.14.0",
+        "gatsby-plugin-manifest": "^5.14.0",
+        "gatsby-plugin-offline": "^6.14.0",
+        "gatsby-plugin-react-helmet": "^6.14.0",
+        "gatsby-plugin-robots-txt": "^1.8.0",
+        "gatsby-plugin-sharp": "^5.14.0",
+        "gatsby-plugin-sitemap": "^6.14.0",
+        "gatsby-plugin-styled-components": "^6.14.0",
         "gatsby-remark-external-links": "0.0.4",
-        "gatsby-remark-images": "^3.3.1",
-        "gatsby-source-filesystem": "^2.2.5",
-        "gatsby-transformer-remark": "^2.8.0",
-        "gatsby-transformer-sharp": "^2.4.7",
-        "gsap": "^3.2.6",
-        "prop-types": "^15.7.2",
-        "react": "^16.12.0",
-        "react-dom": "^16.12.0",
-        "react-helmet": "^6.0.0",
-        "react-transition-group": "^4.3.0",
-        "react-use": "^14.2.0",
-        "scrollreveal": "^4.0.6",
+        "gatsby-remark-images": "^7.14.0",
+        "gatsby-source-filesystem": "^5.14.0",
+        "gatsby-transformer-remark": "^6.14.0",
+        "gatsby-transformer-sharp": "^5.14.0",
+        "gsap": "^3.12.5",
+        "prop-types": "^15.8.1",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
+        "react-helmet": "^6.1.0",
+        "react-transition-group": "^4.4.5",
+        "react-use": "^17.5.1",
+        "scrollreveal": "^4.0.9",
         "smooth-scroll": "^16.1.3",
-        "styled-components": "^5.1.0"
+        "styled-components": "^5.3.11"
     },
     "devDependencies": {
-        "prettier": "2.0.4"
+        "prettier": "2.8.8"
     },
     "keywords": [
         "gatsby"
@@ -54,6 +51,9 @@
         "url": "https://github.com/ogunwoleoluwatobi/v3"
     },
     "bugs": {
-        "url": "https://github.com/gatsbyjs/gatsby/issues"
+        "url": "https://github.com/ogunwoleoluwatobi/v3/issues"
+    },
+    "engines": {
+        "node": ">=18.0.0"
     }
 }

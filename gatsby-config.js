@@ -1,4 +1,3 @@
-const path = require('path');
 const config = require('./src/config');
 
 module.exports = {
@@ -9,13 +8,8 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-styled-components`,
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: config.googleAnalyticsID,
-      },
-    },
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sitemap`,
@@ -51,7 +45,7 @@ module.exports = {
               maxWidth: 700,
               linkImagesToOriginal: true,
               quality: 90,
-              tracedSVG: { color: config.colors.green }
+              backgroundColor: config.colors.darkBlue,
             },
           },
         ],
@@ -70,20 +64,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-offline`,
-    {
-      resolve: `gatsby-plugin-alias-imports`,
-      options: {
-        alias: {
-          '@components': path.resolve(__dirname, 'src/components'),
-          '@config': path.resolve(__dirname, 'src/config'),
-          '@pages': path.resolve(__dirname, 'src/pages'),
-          '@styles': path.resolve(__dirname, 'src/styles'),
-          '@fonts': path.resolve(__dirname, 'src/fonts'),
-          '@images': path.resolve(__dirname, 'src/images'),
-          '@utils': path.resolve(__dirname, 'src/utils'),
-        },
-      }
-    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

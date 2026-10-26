@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styled from 'styled-components';
-import Img from 'gatsby-image';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import sr from '@utils/sr';
 import { github, srConfig } from '@config';
 import { theme, media, Section, Heading } from '@styles';
@@ -115,7 +115,7 @@ const ImgContain = styled.div`
         border-radius: 50%;
     }
 `;
-const Avatar = styled(Img)`
+const Avatar = styled(GatsbyImage)`
     position: relative;
     max-height: 260px;
     mix-blend-mode: multiply;
@@ -193,7 +193,7 @@ const About = ({ data }) => {
                         </Skills>
                         <ImgContain>
                             <AvatarLink href={github}>
-                                <Avatar fluid={avatar.childImageSharp.fluid} alt="Avatar" />
+                                <Avatar image={getImage(avatar)} alt="Avatar" />
                             </AvatarLink>
                             <div className="animation-wrapper">
                                 <div className="stagger-visualizer">
