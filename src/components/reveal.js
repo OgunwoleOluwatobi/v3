@@ -3,13 +3,13 @@ import sr from '@utils/sr';
 import { theme } from '@styles';
 import { prefersReducedMotion } from './loader';
 
-// True once the intro hands off to the page, or straight away when it doesn't play. Pages outside Layout count as revealed.
+// True once the intro hands off, or straight away when it doesn't play. Defaults to true outside Layout.
 export const RevealContext = createContext(true);
 export const useRevealed = () => useContext(RevealContext);
 
 const useIsomorphicLayoutEffect = typeof window === 'undefined' ? useEffect : useLayoutEffect;
 
-// Content renders visible on the server ('initial'), hides before the first paint while the intro runs, then animates in
+// Visible on the server, hidden before the first paint while the intro runs, then animated in
 export const useEntrance = () => {
     const revealed = useRevealed();
     const [phase, setPhase] = useState('initial');
@@ -33,7 +33,7 @@ export const entranceStyle = (phase, { delay = 0, y = 0, duration = 300 } = {}) 
         return { opacity: 0.01, transform: `translateY(${y}px)`, transition: 'none' };
     }
     if (phase === 'shown') {
-        // Override any transition the element has of its own, so reduced motion snaps into place
+        // Also overrides the element's own transition, so reduced motion snaps into place
         return prefersReducedMotion() ? { transition: 'none' } : {
             transition: `opacity ${duration}ms ${theme.easing}, transform ${duration}ms ${theme.easing}`,
             transitionDelay: `${delay}ms`,
@@ -42,7 +42,7 @@ export const entranceStyle = (phase, { delay = 0, y = 0, duration = 300 } = {}) 
     return {};
 };
 
-// Registers ScrollReveal once revealed, so sections already in view don't animate behind the intro
+// Waits for the reveal, so sections already in view don't animate behind the intro
 export const useScrollReveal = register => {
     const revealed = useRevealed();
     useEffect(() => {
@@ -51,5 +51,5 @@ export const useScrollReveal = register => {
     }, [revealed]);
 };
 
-// Render-prop form of useEntrance, for class components
+// For class components
 export const Entrance = ({ children }) => children(useEntrance());

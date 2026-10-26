@@ -26,7 +26,7 @@ const Layout = ({ children, location }) => {
 
   const isHome = location.pathname === '/';
   const [isLoading, setIsLoading] = useState(isHome);
-  // The page renders under the loader; entrance animations wait for the intro to hand off
+  // Set when the intro hands off; entrance animations wait for it
   const [revealed, setRevealed] = useState(!isHome);
   const [showNavLogo, setShowNavLogo] = useState(!isHome);
 
