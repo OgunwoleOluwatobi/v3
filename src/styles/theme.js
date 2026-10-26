@@ -50,7 +50,7 @@ const theme = {
 
     navHeight: '100px',
     navScrollHeight: '70px',
-    navDelay: 1000,
+    navDelay: 100,
     loaderDelay: 2000
 }
 

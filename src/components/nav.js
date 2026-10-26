@@ -6,6 +6,8 @@ import { navLinks, navHeight } from '@config';
 import {theme, media} from '@styles';
 import { debounce } from '@utils';
 import Logo from '@components/icons/logo';
+import anime from 'animejs';
+import { faceDrop, prefersReducedMotion } from '@components/loader';
 const { colors, fonts, fontSizes } = theme;
 
 const StyledContainer = styled.header`
@@ -173,7 +175,17 @@ class Nav extends Component {
 
         this.setState({ lastScrollTop: fromTop });
     }
-    
+
+    replayLogo = (e) => {
+        const face = e.currentTarget.querySelector('#img');
+        // Includes timelines, like the redraw after a refresh
+        const animatesFace = a => a.animatables.some(({ target }) => target === face) || a.children.some(animatesFace);
+        if (!face || prefersReducedMotion() || anime.running.some(animatesFace)) {
+            return;
+        }
+        anime({ targets: face, easing: 'easeInOutSine', keyframes: faceDrop });
+    }
+
 
   render() {
     const { isMounted, scrollDirection, lastScrollTop } = this.state;
@@ -199,15 +211,18 @@ class Nav extends Component {
                                     </StyledListItem>
                                     {i===1 && (
                                         <div style={{ transitionDelay:  `${isHome ? i*100 : 0}ms` }}>
-                                            <StyledLogo 
+                                            <StyledLogo
                                                 tabIndex="-1"
+                                                data-nav-logo
+                                                // Not visibility: hidden, so it is already painted when the intro lands on it
+                                                style={{ opacity: this.props.hideLogo ? 0.01 : 1, transitionProperty: 'margin' }}
                                                 scrollDirection={scrollDirection}>
                                                 {isHome ? (
-                                                    <a href="/" aria-label="home">
+                                                    <a href="/" aria-label="home" onMouseEnter={this.replayLogo}>
                                                         <Logo/>
                                                     </a>
                                                 ) : (
-                                                    <Link to="/" aria-label="home">
+                                                    <Link to="/" aria-label="home" onMouseEnter={this.replayLogo}>
                                                         <Logo/>
                                                     </Link>
                                                 )}

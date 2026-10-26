@@ -25,9 +25,12 @@ const Layout = ({ children, location }) => {
 
   const isHome = location.pathname === '/';
   const [isLoading, setIsLoading] = useState(isHome);
+  // Mounted near the end of the intro so the logo can land in the nav
+  const [isReady, setIsReady] = useState(!isHome);
+  const [showNavLogo, setShowNavLogo] = useState(!isHome);
 
   useEffect(() => {
-    if(isLoading) {
+    if(!isReady) {
       return;
     };
     if(location.hash) {
@@ -41,18 +44,22 @@ const Layout = ({ children, location }) => {
       }, 0);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isLoading])
+  }, [isReady])
 
   return (
     <div id="root">
       <Head metadata={data.site.siteMetadata} />
       <GlobalStyle/>
-      {isLoading && isHome ? (
-        <Loader finishLoading = {() => {setIsLoading(false)}} />
-      ) : (
+      {isLoading && isHome && (
+        <Loader
+          onReveal = {() => {setIsReady(true)}}
+          onLand = {() => {setShowNavLogo(true)}}
+          finishLoading = {() => {setIsLoading(false)}} />
+      )}
+      {isReady && (
         <div>
           <Bground/>
-          <Nav isHome={isHome} />
+          <Nav isHome={isHome} hideLogo={!showNavLogo} />
           <Social />
           <Menu />
           <div>
