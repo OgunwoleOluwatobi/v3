@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styled from 'styled-components';
-import Img from 'gatsby-image';
-import sr from '@utils/sr';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { useScrollReveal } from '@components/reveal';
 import { github, srConfig } from '@config';
 import { theme, media, Section, Heading } from '@styles';
 const { colors, fontSizes, fonts } = theme;
@@ -115,7 +115,7 @@ const ImgContain = styled.div`
         border-radius: 50%;
     }
 `;
-const Avatar = styled(Img)`
+const Avatar = styled(GatsbyImage)`
     position: relative;
     max-height: 260px;
     mix-blend-mode: multiply;
@@ -177,9 +177,10 @@ const About = ({ data }) => {
         totalDot.push(index);
       }
       setdots(totalDot);
-      sr.reveal(sectionRef.current, srConfig());
       // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
+
+    useScrollReveal(sr => sr.reveal(sectionRef.current, srConfig()));
 
     return (
         <Container id="about" ref={sectionRef} >
@@ -193,7 +194,7 @@ const About = ({ data }) => {
                         </Skills>
                         <ImgContain>
                             <AvatarLink href={github}>
-                                <Avatar fluid={avatar.childImageSharp.fluid} alt="Avatar" />
+                                <Avatar image={getImage(avatar)} alt="Avatar" />
                             </AvatarLink>
                             <div className="animation-wrapper">
                                 <div className="stagger-visualizer">

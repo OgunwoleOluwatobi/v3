@@ -1,7 +1,7 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import styled from 'styled-components';
-import Img from 'gatsby-image';
-import sr from '@utils/sr';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { useScrollReveal } from '@components/reveal';
 import { srConfig } from '@config';
 import { FormattedIcon } from '../icons';
 import { theme, media, Section, Heading } from '@styles';
@@ -143,7 +143,7 @@ const TechList = styled.ul`
         }
     }
 `;
-const StyledImg = styled(Img)`
+const StyledImg = styled(GatsbyImage)`
     width: 100%;
     height: 100%;
 `;
@@ -153,14 +153,14 @@ const Projects = ({ data }) => {
     const revealTitle = useRef(null);
     const revealProject = useRef([]);
 
-    useEffect(() => {
+    useScrollReveal(sr => {
         sr.reveal(revealTitle.current, srConfig());
         revealProject.current.forEach((ref, i) => sr.reveal(ref, srConfig(i * 100)));
-    }, []);
+    });
 
     return (
         <Container>
-            <Heading ref={revealTitle}><span className="two">Other&nbsp;</span><span className="one">Noteable&nbsp;</span><span className="two">Projects</span></Heading>
+            <Heading ref={revealTitle}><span className="two">Other&nbsp;</span><span className="one">Notable&nbsp;</span><span className="two">Projects</span></Heading>
             <Content>
                 {projects && projects.map(({ node }, i) => {
                         const { frontmatter, html } = node;
@@ -169,7 +169,7 @@ const Projects = ({ data }) => {
                         return(
                             <Hold key={i} ref={el => (revealProject.current[i] = el)}>
                                 <div className="Imgi">
-                                    <StyledImg fluid={bg.childImageSharp.fluid} />
+                                    <StyledImg image={getImage(bg)} alt={title} />
                                 </div>
                                 <div className="Txt">
                                     <Title>{title}</Title>

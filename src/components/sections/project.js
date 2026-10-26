@@ -1,7 +1,7 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import styled from 'styled-components';
-import Img from 'gatsby-image';
-import sr from '@utils/sr';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { useScrollReveal } from '@components/reveal';
 import { srConfig } from '@config';
 import { FormattedIcon } from '../icons';
 import { keyFramesRight, keyFramesLeft, keyFramesTop } from '@styles/keyframes';
@@ -127,7 +127,7 @@ const Built = styled.ul`
         width: 100%;
     `};
 `;
-const ImgContainer = styled(Img)`
+const ImgContainer = styled(GatsbyImage)`
     width: 100%;
     max-width: 100%;
     vertical-align: middle;
@@ -331,10 +331,10 @@ const Project = ({ data }) => {
     const revealTitle = useRef(null);
     const revealProject = useRef([]);
 
-    useEffect(() => {
+    useScrollReveal(sr => {
         sr.reveal(revealTitle.current, srConfig());
         revealProject.current.forEach((ref, i) => sr.reveal(ref, srConfig(i * 100)));
-    }, []);
+    });
 
   return (
     <StyledContainer id="projects">
@@ -411,7 +411,7 @@ const Project = ({ data }) => {
                             href={external ? external : github ? github : '#'}
                             target="_blank"
                             rel="nofollow noopener noreferrer">
-                            <ImgContainer fluid={cover.childImageSharp.fluid} alt={title} />
+                            <ImgContainer image={getImage(cover)} alt={title} />
                         </StyledImg>
                         <Cover></Cover>
                     </Hold>

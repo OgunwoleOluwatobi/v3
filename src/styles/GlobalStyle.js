@@ -48,9 +48,6 @@ const GlobalStyle = createGlobalStyle`
   p {
     font-family: ${fonts.Calibre};
   }
-  .gatsby-image-outer-wrapper {
-    height: 100%;
-  }
   ${TransitionStyle};
 `;
 

@@ -6,6 +6,9 @@ import { navLinks, navHeight } from '@config';
 import {theme, media} from '@styles';
 import { debounce } from '@utils';
 import Logo from '@components/icons/logo';
+import anime from 'animejs';
+import { faceDrop, prefersReducedMotion } from '@components/loader';
+import { Entrance, entranceStyle } from '@components/reveal';
 const { colors, fonts, fontSizes } = theme;
 
 const StyledContainer = styled.header`
@@ -173,51 +176,61 @@ class Nav extends Component {
 
         this.setState({ lastScrollTop: fromTop });
     }
-    
+
+    replayLogo = (e) => {
+        const face = e.currentTarget.querySelector('#img');
+        // Includes timelines, like the redraw after a refresh
+        const animatesFace = a => a.animatables.some(({ target }) => target === face) || a.children.some(animatesFace);
+        if (!face || prefersReducedMotion() || anime.running.some(animatesFace)) {
+            return;
+        }
+        anime({ targets: face, easing: 'easeInOutSine', keyframes: faceDrop });
+    }
+
 
   render() {
     const { isMounted, scrollDirection, lastScrollTop } = this.state;
     const { isHome } = this.props;
     const timeout = isHome ? 2000 : 0;
     const fadeDown = isHome ? 'fadedown' : '';
+    const { hideLogo } = this.props;
 
     return (
       <StyledContainer scrollDirection={scrollDirection} fromTop={lastScrollTop}>
           <StyledHold>
             <StyledNav>
                 <StyledList>
-                    <TransitionGroup component={null}>
-                        {isMounted && 
-                         navLinks && 
-                         navLinks.map(({url, name}, i) => (
-                            <CSSTransition key={i} classNames={fadeDown} timeout={timeout}>
-                                <>
-                                    <StyledListItem 
+                    <Entrance>
+                        {phase => navLinks && navLinks.map(({url, name}, i) => (
+                                <React.Fragment key={i}>
+                                    <StyledListItem
                                         scrollDirection={scrollDirection}
-                                        style={{ transitionDelay:  `${isHome ? i*100 : 0}ms` }}>
+                                        style={entranceStyle(phase, { delay: i * 100, y: -20 })}>
                                         <StyledListLink to={url}>{name}</StyledListLink>
                                     </StyledListItem>
                                     {i===1 && (
-                                        <div style={{ transitionDelay:  `${isHome ? i*100 : 0}ms` }}>
-                                            <StyledLogo 
+                                        <div>
+                                            <StyledLogo
                                                 tabIndex="-1"
+                                                data-nav-logo
+                                                // Not visibility: hidden, so it is already painted when the intro lands on it
+                                                style={{ opacity: hideLogo ? 0.01 : 1, transitionProperty: 'margin' }}
                                                 scrollDirection={scrollDirection}>
                                                 {isHome ? (
-                                                    <a href="/" aria-label="home">
+                                                    <a href="/" aria-label="home" onMouseEnter={this.replayLogo}>
                                                         <Logo/>
                                                     </a>
                                                 ) : (
-                                                    <Link to="/" aria-label="home">
+                                                    <Link to="/" aria-label="home" onMouseEnter={this.replayLogo}>
                                                         <Logo/>
                                                     </Link>
                                                 )}
                                             </StyledLogo>
                                         </div>
                                     )}
-                                </>
-                            </CSSTransition>
+                                </React.Fragment>
                         ))}
-                    </TransitionGroup>
+                    </Entrance>
                 </StyledList>
             </StyledNav>
             <TransitionGroup component={null}>

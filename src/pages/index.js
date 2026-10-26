@@ -52,7 +52,7 @@ export const pageQuery = graphql `
     }
     project: allMarkdownRemark(
       filter: {fileAbsolutePath: {regex: "/Project/"}}
-      sort: {fields: [frontmatter___no], order:ASC}
+      sort: {frontmatter: {no: ASC}}
     ) {
         edges {
           node {
@@ -60,9 +60,7 @@ export const pageQuery = graphql `
               title
               cover {
                 childImageSharp {
-                  fluid(maxWidth: 700, quality: 90) {
-                    ...GatsbyImageSharpFluid
-                  }
+                  gatsbyImageData(layout: FULL_WIDTH, breakpoints: [360, 700, 1050], quality: 90, placeholder: BLURRED)
                 }
               }
               built
@@ -81,10 +79,8 @@ export const pageQuery = graphql `
           frontmatter {
             title
             avatar {
-              childImageSharp{
-                fluid(maxWidth: 700, quality: 90, traceSVG: { color: "#4DC932"}) {
-                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
-                }
+              childImageSharp {
+                gatsbyImageData(layout: FULL_WIDTH, breakpoints: [360, 700, 1050], quality: 90, placeholder: DOMINANT_COLOR, formats: [AUTO, WEBP])
               }
             }
             skills
@@ -95,16 +91,14 @@ export const pageQuery = graphql `
     }
     projects: allMarkdownRemark(
       filter: {fileAbsolutePath: {regex: "/projects/"}}
-      sort: {fields: [frontmatter___id], order:ASC}
+      sort: {frontmatter: {id: ASC}}
     ) {
         edges {
           node {
             frontmatter {
               bg {
                 childImageSharp {
-                  fluid(maxWidth: 700, quality: 90) {
-                    ...GatsbyImageSharpFluid
-                  }
+                  gatsbyImageData(layout: FULL_WIDTH, breakpoints: [360, 700, 1050], quality: 90, placeholder: BLURRED)
                 }
               }
               title
@@ -118,7 +112,7 @@ export const pageQuery = graphql `
       }
     jobs: allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/jobs/" } }
-      sort:{ fields: [frontmatter___date], order: ASC}
+      sort: {frontmatter: {date: ASC}}
     ) {
       edges {
         node {

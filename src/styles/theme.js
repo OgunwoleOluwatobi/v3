@@ -39,6 +39,7 @@ const theme = {
         h3: '35px',
     },
 
+    easing: 'cubic-bezier(0.645, 0.045, 0.355, 1)',
     transition: 'all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1)',
 
     hamburgerWidth: 28,
@@ -49,7 +50,7 @@ const theme = {
 
     navHeight: '100px',
     navScrollHeight: '70px',
-    navDelay: 1000,
+    navDelay: 100,
     loaderDelay: 2000
 }
 

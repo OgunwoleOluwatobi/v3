@@ -1,16 +1,17 @@
 import React from 'react'
 
-const Logo = () => (
+// idPrefix keeps pattern and clip ids unique when the logo is on the page twice (loader and nav)
+const Logo = ({ idPrefix: p = '' }) => (
     <svg version="1.1" id="logo" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 500 420">
 		
-		<pattern x="-125" y="-1.5" width="10" height="10" patternUnits="userSpaceOnUse" id="New_Pattern"
+		<pattern x="-125" y="-1.5" width="10" height="10" patternUnits="userSpaceOnUse" id={`${p}New_Pattern`}
 			viewBox="0 -10 10 10">
 			<g>
 				<rect y="-10" className="st0" width="10" height="10" fill="none"/>
 				<circle className="st1" cx="5" cy="-5" r="2.5" fill="#60FF39" />
 			</g>
 		</pattern>
-		<pattern x="-125" y="-1.5" width="10" height="10" patternUnits="userSpaceOnUse" id="New_Pattern_4"
+		<pattern x="-125" y="-1.5" width="10" height="10" patternUnits="userSpaceOnUse" id={`${p}New_Pattern_4`}
 			viewBox="0 -10 10 10">
 			<g>
 				<rect y="-10" className="st0" width="10" height="10" fill="none" />
@@ -24,19 +25,19 @@ const Logo = () => (
 			</g>
 		</g>
 		<g id="dot">
-			<pattern id="SVGID_1_" xlinkHref="#New_Pattern"
+			<pattern id={`${p}SVGID_1_`} xlinkHref={`#${p}New_Pattern`}
 				patternTransform="matrix(0.3604 -0.3604 0.3536 0.3536 -2235.8928 -7657.582)">
 			</pattern>
-			<rect x="65" y="40.5" className="st5" width="317" height="343" fill="url(#SVGID_1_)" />
+			<rect x="65" y="40.5" className="st5" width="317" height="343" fill={`url(#${p}SVGID_1_)`} />
 			<g>
 				<defs>
-					<rect id="SVGID_2_" x="65" y="40.5" width="317" height="344" />
+					<rect id={`${p}SVGID_2_`} x="65" y="40.5" width="317" height="344" />
 				</defs>
-				<clipPath id="SVGID_3_">
-					<use xlinkHref="#SVGID_2_" />
+				<clipPath id={`${p}SVGID_3_`}>
+					<use xlinkHref={`#${p}SVGID_2_`} />
 				</clipPath>
 
-				<pattern id="SVGID_4_" xlinkHref="#New_Pattern_4"
+				<pattern id={`${p}SVGID_4_`} xlinkHref={`#${p}New_Pattern_4`}
 					patternTransform="matrix(0.3604 -0.3604 0.3536 0.3536 -2235.8928 -7657.582)">
 				</pattern>
 				<path className="st6" d="M413.86,134.46c-1.51-3.58-3.02-7.17-4.54-10.75c-4-6.76-9.38-12.14-16.14-16.14
@@ -49,9 +50,9 @@ const Logo = () => (
 					c24.09,0.85,48.83-7.63,69.44-19.55c17.4-10.06,32.69-23.47,48.39-36c9.79-7.24,19.99-13.66,30.99-18.87
 					c8.54-3.21,17.33-5.72,26.29-7.42c0.76-0.04,1.53-0.07,2.29-0.09c2.49,1.58,4.89,3.33,7.26,5.14c-2.23-1.72-4.45-3.44-6.68-5.16
 					c0,0,0.01,0,0.01,0c28.09,21.71,56.36,43.17,85.08,64.06c8.89,6.47,24.52,7.33,34.68,4.54c10.44-2.87,21.75-10.95,26.89-20.68
-					C414.84,158.69,417.6,146.04,413.86,134.46z" clipPath="url(#SVGID_3_)" fill="url(#SVGID_4_)" />
+					C414.84,158.69,417.6,146.04,413.86,134.46z" clipPath={`url(#${p}SVGID_3_)`} fill={`url(#${p}SVGID_4_)`} />
 
-				<pattern id="SVGID_5_" xlinkHref="#New_Pattern_4"
+				<pattern id={`${p}SVGID_5_`} xlinkHref={`#${p}New_Pattern_4`}
 					patternTransform="matrix(0.3604 -0.3604 0.3536 0.3536 -2235.8928 -7657.582)">
 				</pattern>
 				<path className="st7" d="M374.81,306.97c-5.46-9.33-16.17-18.24-26.89-20.68c-11.52-2.62-24.45-2.06-34.68,4.54
@@ -66,7 +67,7 @@ const Logo = () => (
 					c4.55,0.94,9.01,2.2,13.39,3.75c6.18,3.03,12.06,6.58,17.69,10.55c8,6.76,15.28,14.28,21.94,22.36
 					c12.13,16.67,22.13,34.73,31.88,52.87c13.03,24.23,25.01,50.97,49.04,66.33c14.85,9.49,33.26,12.18,50.52,12.63
 					c14.03,0.36,29.07-1.29,42.17-6.53c15.68-6.28,29.95-14.79,40.68-28.17c11.12-13.86,18.64-27.72,24.38-44.69
-					c4.2-12.43,6.44-25.45,9-38.28c2.83-14.24,5.67-28.49,8.5-42.73C381.73,329.67,381.14,317.77,374.81,306.97z" clipPath="url(#SVGID_3_)" fill="url(#SVGID_5_)" />
+					c4.2-12.43,6.44-25.45,9-38.28c2.83-14.24,5.67-28.49,8.5-42.73C381.73,329.67,381.14,317.77,374.81,306.97z" clipPath={`url(#${p}SVGID_3_)`} fill={`url(#${p}SVGID_5_)`} />
 			</g>
 		</g>
 		<g id="shadow">

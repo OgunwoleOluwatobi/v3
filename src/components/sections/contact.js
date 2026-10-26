@@ -1,6 +1,6 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import styled from 'styled-components';
-import sr from '@utils/sr';
+import { useScrollReveal } from '@components/reveal';
 import { srConfig, email } from '@config';
 import { theme, media, Section, Heading } from '@styles';
 const { colors, fontSizes, fonts } = theme;
@@ -65,11 +65,11 @@ const Contact = ({ data }) => {
     const subRef = useRef(null);
     const buttonRef = useRef(null);
 
-    useEffect(() => {
+    useScrollReveal(sr => {
       sr.reveal(sectionRef.current, srConfig());
       sr.reveal(subRef.current, srConfig(250));
       sr.reveal(buttonRef.current, srConfig(300));
-    }, []);
+    });
 
     return (
         <Container id="contact" ref={sectionRef}>

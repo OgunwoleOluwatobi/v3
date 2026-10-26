@@ -12,4 +12,4 @@ built:
 show: true
 ---
 
-An web app with minimalistic design for visualizing income and expenses with ability to create, update and delete transactions.
+A web app with a minimalistic design for visualizing income and expenses, with the ability to create, update and delete transactions.

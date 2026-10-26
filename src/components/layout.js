@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import { GlobalStyle, Bground } from '@styles';
 import "./layout.css"
 import { Head, Nav, Loader, Social, Menu, Footer } from '@components';
+import { RevealContext } from './reveal';
 
 if(typeof window !== 'undefined') {
   //eslint-disable-next-line global-require
@@ -25,9 +26,12 @@ const Layout = ({ children, location }) => {
 
   const isHome = location.pathname === '/';
   const [isLoading, setIsLoading] = useState(isHome);
+  // Set when the intro hands off; entrance animations wait for it
+  const [revealed, setRevealed] = useState(!isHome);
+  const [showNavLogo, setShowNavLogo] = useState(!isHome);
 
   useEffect(() => {
-    if(isLoading) {
+    if(!revealed) {
       return;
     };
     if(location.hash) {
@@ -41,18 +45,22 @@ const Layout = ({ children, location }) => {
       }, 0);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isLoading])
+  }, [revealed])
 
   return (
     <div id="root">
       <Head metadata={data.site.siteMetadata} />
       <GlobalStyle/>
-      {isLoading && isHome ? (
-        <Loader finishLoading = {() => {setIsLoading(false)}} />
-      ) : (
+      {isLoading && isHome && (
+        <Loader
+          onReveal = {() => {setRevealed(true)}}
+          onLand = {() => {setShowNavLogo(true)}}
+          finishLoading = {() => {setIsLoading(false)}} />
+      )}
+      <RevealContext.Provider value={revealed}>
         <div>
           <Bground/>
-          <Nav isHome={isHome} />
+          <Nav isHome={isHome} hideLogo={!showNavLogo} />
           <Social />
           <Menu />
           <div>
@@ -60,7 +68,7 @@ const Layout = ({ children, location }) => {
               <Footer />
             </div>
         </div>
-      )}
+      </RevealContext.Provider>
     </div>
   )
 }

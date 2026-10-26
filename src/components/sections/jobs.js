@@ -1,6 +1,6 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import styled from 'styled-components';
-import sr from '@utils/sr';
+import { useScrollReveal } from '@components/reveal';
 import { srConfig, email } from '@config';
 import { theme, Section, Heading } from '@styles';
 import { Range } from '../icons';
@@ -98,10 +98,10 @@ const Jobs = ({ data }) => {
     const revealTitle = useRef(null);
     const revealJobs = useRef([]);
 
-    useEffect(() => {
+    useScrollReveal(sr => {
         sr.reveal(revealTitle.current, srConfig());
         revealJobs.current.forEach((ref, i) => sr.reveal(ref, srConfig(i * 100)));
-    }, []);
+    });
 
     return (
         <Container id="experience">

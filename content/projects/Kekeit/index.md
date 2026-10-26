@@ -10,4 +10,4 @@ built:
 show: true
 ---
 
-An Android based application developed to help ease finding of tricyle and also connect riders to customers in the vicinity of Babcock University and more.
+An Android based application developed to make finding tricycles easier and to connect riders to customers in the vicinity of Babcock University and more.
