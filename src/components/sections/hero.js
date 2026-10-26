@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import anime from 'animejs';
 import { email } from '@config';
 import { theme, media, Section } from '@styles';
-import { TransitionGroup, CSSTransition } from 'react-transition-group';
-const { colors, fontSizes, fonts, navDelay, loaderDelay } = theme;
+import { useEntrance, entranceStyle } from '@components/reveal';
+const { colors, fontSizes, fonts } = theme;
 
 const Contain = styled(Section)
 `
@@ -276,7 +276,7 @@ const Hero = ({ data }) => {
     };
 
     const [dots, setdots] = useState([200]);
-    const [isMounted, setIsMounted] = useState(false);
+    const phase = useEntrance();
     const totalDot = [];
 
     useEffect(() => {
@@ -287,8 +287,6 @@ const Hero = ({ data }) => {
         totalDot.push(index);
       }
       setdots(totalDot);
-      const timeout = setTimeout(() => setIsMounted(true), navDelay);
-      return () => clearTimeout(timeout);
       // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
@@ -296,24 +294,24 @@ const Hero = ({ data }) => {
     const { title, name_1, name_2, name_3, name_4, subtitle, buttonText, resumeText } = frontmatter;
 
     const one = () => (
-      <Title style={{ transitionDelay: '100ms' }}>{title}</Title>
+      <Title style={entranceStyle(phase, { delay: 100, y: 20 })}>{title}</Title>
     );
     const two = () => (
-      <Name style={{ transitionDelay: '200ms' }}><WhiteName>{name_1}</WhiteName><GreenName>{name_2}</GreenName></Name>
+      <Name style={entranceStyle(phase, { delay: 200, y: 20 })}><WhiteName>{name_1}</WhiteName><GreenName>{name_2}</GreenName></Name>
     );
     const three = () => (
-      <Name style={{ transitionDelay: '300ms' }}><WhiteName>{name_3}</WhiteName><GreenName>{name_4}</GreenName></Name>
+      <Name style={entranceStyle(phase, { delay: 300, y: 20 })}><WhiteName>{name_3}</WhiteName><GreenName>{name_4}</GreenName></Name>
     );
     const four = () => (
-      <Subtitle style={{ transitionDelay: '400ms' }}>{subtitle}</Subtitle>
+      <Subtitle style={entranceStyle(phase, { delay: 400, y: 20 })}>{subtitle}</Subtitle>
     );
     const five = () => (
       <Description 
-       style={{ transitionDelay: '500ms' }}
+       style={entranceStyle(phase, { delay: 500, y: 20 })}
        dangerouslySetInnerHTML={{__html: html}} />
     );
     const six = () => (
-      <ButtonHolder style={{ transitionDelay: '600ms' }}>
+      <ButtonHolder style={entranceStyle(phase, { delay: 600, y: 20 })}>
         <EmailLink>
           <div className="inner"><a href={`mailto:${email}`}>{buttonText}</a></div>
         </EmailLink>
@@ -327,27 +325,17 @@ const Hero = ({ data }) => {
         <Contain play = {(pt) => play('paused')}>
             <div className="animation-wrapper">
               <div className="stagger-visualizer">
-                  <TransitionGroup component={null}>
-                    {isMounted && (
-                      <CSSTransition classNames="fade" timeout={loaderDelay}>
-                        <div className="dots-wrapper" style={{ transitionDelay: '100ms' }}>
-                            {dots.map((e, i) => (
-                              <div key={i} className="dot"></div>
-                            ))}
-                        </div>
-                      </CSSTransition>
-                    )}
-                  </TransitionGroup>
+                  <div className="dots-wrapper" style={entranceStyle(phase, { delay: 100, duration: 1000 })}>
+                      {dots.map((e, i) => (
+                        <div key={i} className="dot"></div>
+                      ))}
+                  </div>
               </div>
             </div>
             <StyledContainer>
-              <TransitionGroup component={null}>
-                {isMounted && items.map((item, i) => (
-                  <CSSTransition key={i} classNames="fadeup" timeout={loaderDelay}>
-                    {item}
-                  </CSSTransition>
-                ))}
-              </TransitionGroup>
+              {items.map((item, i) => (
+                <React.Fragment key={i}>{item()}</React.Fragment>
+              ))}
             </StyledContainer>
         </Contain>
     )

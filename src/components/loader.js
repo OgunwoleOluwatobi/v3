@@ -198,7 +198,7 @@ const Loader = ({ onReveal, onLand, finishLoading }) => {
     return (
         <Container className="loader" ref={containerRef}>
             <StyledLogo isMounted={isMounted} ref={logoRef}>
-                <Logo/>
+                <Logo idPrefix="loader-" />
             </StyledLogo>
         </Container>
     );

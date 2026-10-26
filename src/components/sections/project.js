@@ -1,7 +1,7 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import styled from 'styled-components';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import sr from '@utils/sr';
+import { useScrollReveal } from '@components/reveal';
 import { srConfig } from '@config';
 import { FormattedIcon } from '../icons';
 import { keyFramesRight, keyFramesLeft, keyFramesTop } from '@styles/keyframes';
@@ -331,10 +331,10 @@ const Project = ({ data }) => {
     const revealTitle = useRef(null);
     const revealProject = useRef([]);
 
-    useEffect(() => {
+    useScrollReveal(sr => {
         sr.reveal(revealTitle.current, srConfig());
         revealProject.current.forEach((ref, i) => sr.reveal(ref, srConfig(i * 100)));
-    }, []);
+    });
 
   return (
     <StyledContainer id="projects">

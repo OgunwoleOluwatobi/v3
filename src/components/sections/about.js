@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import sr from '@utils/sr';
+import { useScrollReveal } from '@components/reveal';
 import { github, srConfig } from '@config';
 import { theme, media, Section, Heading } from '@styles';
 const { colors, fontSizes, fonts } = theme;
@@ -177,9 +177,10 @@ const About = ({ data }) => {
         totalDot.push(index);
       }
       setdots(totalDot);
-      sr.reveal(sectionRef.current, srConfig());
       // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
+
+    useScrollReveal(sr => sr.reveal(sectionRef.current, srConfig()));
 
     return (
         <Container id="about" ref={sectionRef} >
