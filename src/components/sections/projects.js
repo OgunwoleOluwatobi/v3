@@ -160,7 +160,7 @@ const Projects = ({ data }) => {
 
     return (
         <Container>
-            <Heading ref={revealTitle}><span className="two">Other&nbsp;</span><span className="one">Noteable&nbsp;</span><span className="two">Projects</span></Heading>
+            <Heading ref={revealTitle}><span className="two">Other&nbsp;</span><span className="one">Notable&nbsp;</span><span className="two">Projects</span></Heading>
             <Content>
                 {projects && projects.map(({ node }, i) => {
                         const { frontmatter, html } = node;

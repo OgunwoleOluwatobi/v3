@@ -9,4 +9,4 @@ built:
     - SCSS
 ---
 
-My first portfolio website designed and built in 2016 after learning a bit of HTML, CSS. After which i continued to improve my web development and design skills immensely. 
+My first portfolio website designed and built in 2016 after learning a bit of HTML and CSS. I've kept improving my web development and design skills ever since. 

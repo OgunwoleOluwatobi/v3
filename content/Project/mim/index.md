@@ -13,4 +13,4 @@ built:
 show: true
 ---
 
-Nigeria’s 1st credit membership platfrom that give access to quick and affordable finance options.
+Nigeria’s 1st credit membership platform that gives access to quick and affordable finance options.

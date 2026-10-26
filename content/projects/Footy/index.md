@@ -11,4 +11,4 @@ built:
 #show: true
 ---
 
-An android and ios Football blog and Livescores application for update on current news, matches, fixtures, statistics and more in football.
+An Android and iOS football blog and live scores application for updates on current news, matches, fixtures, statistics and more in football.

@@ -11,4 +11,4 @@ built:
 show: true
 ---
 
-CashMore is a profit making and sharing platform with a focus on meeting all value-added service and payment needs conveniently on one platform while also allowing individuals earn directly from the telecoms and bill payment industry.
+CashMore is a profit making and sharing platform with a focus on meeting all value-added service and payment needs conveniently on one platform while also allowing individuals to earn directly from the telecoms and bill payment industry.

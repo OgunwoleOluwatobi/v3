@@ -9,4 +9,4 @@ built:
     - Python
 ---
 
-A python and react application that predicts future 5 years values for temprature, humidity and precipitation.
+A Python and React application that predicts temperature, humidity and precipitation for the next five years.

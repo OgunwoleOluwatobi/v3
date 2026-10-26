@@ -15,10 +15,10 @@ skills:
     - Python
 ---
 
-Hey there! meet Oluwatobi (also go by archie), a brilliant and accomplished Senior Mobile Engineer with a six-year track record in developing exceptional mobile solutions. With expertise spanning Flutter, Android, iOS, and web technologies, Oluwatobi has played a pivotal role in shaping digital experiences both in africa and on the internatonal stage.
+Hey there! I'm Oluwatobi, though most people call me Archie. I'm a mobile engineer with over six years of experience building apps with Flutter, native Android and iOS, and the web.
 
-I enjoy creating and designing beautiful and high performance web and mobile applications and everything in between. My Goal is to create high performant and efficient application that enhance user experience.
+I've shipped products for teams in Nigeria, the Gambia and the UK, mostly in finance and health: digital banks, savings and investment apps, credit monitoring and telehealth. I care about apps that look good, feel fast and are easy to use.
 
-I currently work with [Pillar](https://www.hellopillar.com/) as a Mobile Engineer creating intresting digital experiences in the financial space with [Flutter](https://flutter.dev/).
+I currently work at [Pillar](https://www.hellopillar.com/) as Lead Mobile Developer, building tools that help people in the UK understand and improve their credit with [Flutter](https://flutter.dev/).
 
 Here are a few technologies I'm familiar with:
